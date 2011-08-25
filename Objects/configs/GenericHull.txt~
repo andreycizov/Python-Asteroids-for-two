@@ -1,9 +1,0 @@
-Name=Generic Hull
-Class=User_Ship
-HP=8000000
-#HP=1
-mass=1
-
-AddImage=GenericHull ./hulls/GenericHull.png
-
-Redrawn=False
