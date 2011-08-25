@@ -1,0 +1,13 @@
+Name=GenericShipEngine
+Class=Engine
+HP=100000
+Mass=0
+Acceleration=4000000000
+Acceleration Position=0 0
+
+# The collision rectangle will be for the image of the stalled engine, not running!!!
+AddImage=Stall ./engines/stall/GenericShipEngine.png
+AddImage=Running ./engines/running/GenericShipEngine.png
+
+#We should redraw the Engine every time, in case it is running, to show it's current state
+Redrawn=True

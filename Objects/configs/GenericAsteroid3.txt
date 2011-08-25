@@ -1,0 +1,13 @@
+Name=GenericAsteroid
+Class=AsteroidPart
+
+Position=0. 0. 0.
+HP=5000
+AddImage=GenericAsteroid ./asteroids/Asteroid3.png
+
+
+Mass=100000000
+
+Redrawn=False
+
+Large=True

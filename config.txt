@@ -1,0 +1,61 @@
+Game Name=The Game
+
+Window Width=1024
+Window Height=768
+#Window Width=1024
+#Window Height=768
+
+FPS=50
+
+# Object settings
+Objects=./Objects
+Objects Suffix=.txt
+Objects Configs=./configs
+Objects Images=./images
+
+# Physics settings
+# The module loading order matters here!!! We have to do the collisions before moving objects, for example!
+Physics Modules=Collisions Acceleration Moving ZeroAcceleration ScreenLoop
+Physics Modules Bullets=Collisions Moving ScreenLoop
+Physics Modules Decorations=Moving ScreenLoop
+Physics Modules Objects=Collisions Acceleration Moving ZeroAcceleration ScreenLoop
+
+
+# Sprite settings
+Sprite Config Path=./configs/Sprites
+Sprite Config Suffix=.txt
+Sprite Image Suffix=.png
+Sprite Image Path=./Sprites
+
+Bullet Damage Multiplier=0.001
+Bullet Lifespan=100
+
+Blast Force Multiplier=200000000
+Blast Damage Multiplier=5
+
+Bomb Distance Multiplier=0.7
+
+Font HP=dejavuserif
+Font HP Size=12
+
+Font Info=dejavuserif
+Font Info Size=10
+
+Font FastInfo=dejavuserif
+Font FastInfo Size=22
+
+Asteroids Children Max=20
+Asteroids Velocity Factor=10
+Asteroids Collision Damage Factor=15000
+Asteroids New Game Limit=2
+Asteroids New Game Seconds=20
+Astedoids New Game Velocity Limit=10
+
+Modules Decoration=
+
+# Game world settings
+# Frames per second for screen visualisation
+#fps=100
+# Physic tick per second for physics recalculation
+pps=40
+

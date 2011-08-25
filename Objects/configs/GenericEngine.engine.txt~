@@ -1,0 +1,11 @@
+Name=Generic Ship Engine
+Class=Engine
+HP=100
+Mass=100kg
+Acceleration=5m/s
+
+AddImage=Stall ./engines/stall/GenericShipEngine.png
+AddImage=Running ./engines/running/GenericShipEngine.png
+
+#We should redraw the Engine every time, in case it is running, to show it's current state
+Redraw=True

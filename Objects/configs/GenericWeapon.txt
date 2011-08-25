@@ -1,0 +1,13 @@
+Name=GenericWeapon
+Class=Weapon
+Position=0. 0. 0.
+Mass=0
+
+AddImage=Stall ./engines/stall/GenericShipEngine.png
+AddImage=Running ./engines/running/GenericShipEngine.png
+
+Bullet Velocity=1000
+Bullet Mass=100
+Bullet Radius=1
+Bullets Per Frame=2
+

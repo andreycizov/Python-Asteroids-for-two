@@ -1,0 +1,17 @@
+Sprite=First
+Picture=0 0 120 120
+Picture=120 0 120 120
+Picture=240 0 120 120
+
+Picture=0 120 120 120
+Picture=120 120 120 120
+Picture=240 120 120 120
+
+Picture=0 240 120 120
+Picture=120 240 120 120
+Picture=240 240 120 120
+
+Picture=0 360 120 120
+Picture=120 360 120 120
+Picture=240 360 120 120
+

@@ -1,0 +1,24 @@
+Name=GenericBomb
+Class=User_Ship
+
+Position=0. 0. 0.
+
+HP=15000
+Mass=1000
+
+AddImage=GenericBomb ./bombs/GenericBomb.png
+
+# Should we resize this thing before blitting (it resizes the children too)
+Resize=0.5
+
+
+#Add=[How to Name the thing] [Name of the config file] [RelPosX] [RelPosY] [Rotation]
+Add=EngineTop GenericEngine 29.5 -11 180.
+Add=EngineLeft GenericEngine -7 29.5 270.
+Add=EngineRight GenericEngine 65 29.5 90.
+Add=EngineBottom GenericEngine 29.5 64 0.
+
+#Should we call the GenericObject redraw every frame?
+Redrawn=False
+
+

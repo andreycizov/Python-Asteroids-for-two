@@ -1,0 +1,47 @@
+import Modules.World
+import pygame
+from Modules.Vector25D import Vector25D
+
+from Modules.Object.CustomObjects.GenericObject import GenericObjectPart
+from Modules.Object.CustomObjects.GenericBomb import GenericBomb
+import Modules.World
+import Modules.Object.Loader
+import math
+
+class Bomber(GenericObjectPart):
+        def init(self): 
+                
+        
+        def init_custom_info(self, custom):
+                self.blast_radius = float(custom['Blast Radius'])
+                self.init_bomb_class(str(custom['Bomb Class']))
+                self.bomb_name = str(custom['Bomb Name'])
+                self.counter = 0
+        
+        def init_bomb_class(self, class_name):
+                self.bomb_class = Modules.Object.Loader.load_object_class(self.bomb_class)
+                
+        def init_after_parent(self):
+                self.V = Vector25D(math.sin(self.pos[2]/180*math.pi), math.cos(-self.pos[2]/180*math.pi))*self.bullet_velocity
+                
+        def shoot_start(self, c):
+                '''
+                Create a bomb here
+                '''
+                if self.counter < 50:
+                        self.counter+=1
+                else:
+                        bomb = Modules.Object.Loader.load(self.bomb_name, self.bomb_class)
+                        bomb.P = self.P
+                        Modules.World.world.add(bomb)
+                        self.counter = 0
+        
+        def shoot_stop(self):
+                pass
+                
+        def get_controls(self):
+                return [Weapon.shoot_start, Weapon.shoot_stop]
+                        
+        def dynamic_redraw(self):
+                if self.working == True:
+                        self.blit_dynamic(self.images['Running'])

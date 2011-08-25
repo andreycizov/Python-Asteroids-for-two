@@ -1,0 +1,27 @@
+Sprite=First
+Picture=0 0 320 240
+Picture=320 0 320 240
+Picture=640 0 320 240
+Picture=960 0 320 240
+
+Picture=0 240 320 240
+Picture=320 240 320 240
+Picture=640 240 320 240
+Picture=960 240 320 240
+
+Picture=0 480 320 240
+Picture=320 480 320 240
+Picture=640 480 320 240
+Picture=960 480 320 240
+
+Picture=0 720 320 240
+Picture=320 720 320 240
+Picture=640 720 320 240
+Picture=960 720 320 240
+
+Picture=0 960 320 240
+Picture=320 960 320 240
+Picture=640 960 320 240
+Picture=960 960 320 240
+
+

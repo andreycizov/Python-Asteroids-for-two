@@ -1,0 +1,13 @@
+Name=GenericBomber
+Class=Bomber
+Position=0. 0. 0.
+Mass=0
+
+AddImage=Stall ./engines/stall/GenericShipEngine.png
+
+Blast Radius=150
+Bomb Class=GenericBomb
+Bomb Name=GenericBomb
+Bomb Power=100
+Bomb Timeout=500
+
