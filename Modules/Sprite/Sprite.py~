@@ -33,7 +33,7 @@ class Sprite():
                 else:
                         self.current_sprite = 0
                         return True
-        @staticmethod                
+                        
         def from_loader(name, surname, scale, rotation):    
                 return Sprite( Modules.Sprite.SpriteLoader.singleton.load ( name, surname, scale ), rotation)
                 

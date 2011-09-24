@@ -173,7 +173,7 @@ class World():
                 
         def self_draw_font(self, font, text, color, P, flags=0):
                 World.draw_font(self.background, font, text, color, P, flags)
-        @staticmethod        
+                
         def draw_font(surf_to, font, text, color, P, flags=0):
                 surf = font.render(text, True, color).convert_alpha()
                 r = surf.get_rect()

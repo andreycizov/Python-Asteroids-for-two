@@ -83,7 +83,7 @@ class Physics(Register):
                 pass
                         
         def load_module(self, name):
-                module_path = "Modules.Physics."+name
+                module_path = "Modules.Physics.Modules."+name
                 print (module_path)
                 print ( "iii Modules.Physics loading module: '{0}'".format(module_path))
                 m = __import__(module_path, {}, {}, [name])
