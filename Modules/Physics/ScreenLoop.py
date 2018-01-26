@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 from Modules.Register import Register
 from Modules.Vector25D import Vector25D
 from Modules.Config import get

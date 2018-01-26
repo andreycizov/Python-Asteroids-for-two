@@ -3,6 +3,8 @@ Checks for collisions in the world.
 it collides objects only in it's register
 with objects in Modules.World.world
 '''
+from __future__ import absolute_import
+
 import pygame
 from Modules.Register import Register
 from Modules.Vector25D import Vector25D
