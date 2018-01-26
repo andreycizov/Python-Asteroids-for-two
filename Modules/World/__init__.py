@@ -33,6 +33,8 @@ print ( "iii Loading game world module!" )
 Do some world classes here
 '''
 
+DRAW_FONTS = True
+
 class World():
         def __init__(self):
                 self.dimensions = ( int(get("Window Width")), int(get("Window Height")) )
@@ -75,7 +77,14 @@ class World():
                 
         @staticmethod
         def font(name):
-                return pygame.font.Font(pygame.font.match_font(get("Font {0}".format(name))), int(get("Font {0} Size".format(name))))
+                # return pygame.font.Font(pygame.font.match_font(get("Font {0}".format(name))), int(get("Font {0} Size".format(name))))
+                n,s = get("Font {0}".format(name)), int(get("Font {0} Size".format(name)))
+                print('iii Loading Font {}, Size={}'.format(n,s))
+                r = pygame.font.Font(pygame.font.match_font(n), s)
+                #r = None
+                #r = pygame.font.Font(pygame.font.match_font(None, s))
+                print('iii Loaded Font {}, Size={}'.format(n,s))
+                return r 
                 
         def init_fonts(self):
                 pygame.font.init()
@@ -166,7 +175,9 @@ class World():
                 seconds - how many seconds to show the text
                 '''
                 frames_to_live = seconds*self.fps
-                self.texts.append([ self.font_fastinfo.render(text, True, (123,34,12)).convert_alpha(), obj, scaleV, frames_to_live, 0, V ])
+                
+                if DRAW_FONTS:
+                    self.texts.append([ self.font_fastinfo.render(text, True, (123,34,12)).convert_alpha(), obj, scaleV, frames_to_live, 0, V ])
                 
         def remove_text(self, obj):
                 self.texts.remove(obj)
@@ -175,9 +186,10 @@ class World():
                 World.draw_font(self.background, font, text, color, P, flags)
         @staticmethod        
         def draw_font(surf_to, font, text, color, P, flags=0):
-                surf = font.render(text, True, color).convert_alpha()
-                r = surf.get_rect()
-                surf_to.blit(surf, (int(P[0]-r.w/2), int(P[1]-r.h/2)), special_flags=flags)
+                if DRAW_FONTS:
+                    surf = font.render(text, True, color).convert_alpha()
+                    r = surf.get_rect()
+                    surf_to.blit(surf, (int(P[0]-r.w/2), int(P[1]-r.h/2)), special_flags=flags)
         
         def redraw(self):
                 #self.background.blit(self.background_image, (0,0))
@@ -284,7 +296,11 @@ class World():
                         
         def init_screen(self):
                 pygame.init()
-                self.screen = pygame.display.set_mode(self.dimensions, pygame.DOUBLEBUF | pygame.HWSURFACE | pygame.FULLSCREEN)
+                dims = self.dimensions
+                opts = pygame.DOUBLEBUF | pygame.HWSURFACE | pygame.FULLSCREEN
+                opts = pygame.DOUBLEBUF | pygame.HWSURFACE
+
+                self.screen = pygame.display.set_mode((dims[0], int(dims[1])), opts)
                 pygame.display.set_caption( get("Game Name") )
                 
         def init_background(self):

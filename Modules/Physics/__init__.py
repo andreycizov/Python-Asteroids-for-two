@@ -5,9 +5,11 @@ Physics operation module
 - detects collisions
 - does force application to the main object
 '''
-import Modules.World
+from __future__ import absolute_import
+
 from Modules.Register import Register
 from Modules.Config import get
+
 
 from Modules.Vector25D import Vector25D
 import math

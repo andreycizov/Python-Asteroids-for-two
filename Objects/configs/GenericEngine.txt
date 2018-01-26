@@ -2,7 +2,8 @@ Name=GenericShipEngine
 Class=Engine
 HP=0
 Mass=0
-Acceleration=4000000000
+#Acceleration=4000000000
+Acceleration=12000000000
 Acceleration Position=0 0
 
 # The collision rectangle will be for the image of the stalled engine, not running!!!

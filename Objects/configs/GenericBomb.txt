@@ -4,7 +4,8 @@ Class=User_Ship
 Position=0. 0. 0.
 
 HP=15000
-Mass=1000
+#Mass=1000
+Mass=320000
 
 AddImage=GenericBomb ./bombs/GenericBomb.png
 

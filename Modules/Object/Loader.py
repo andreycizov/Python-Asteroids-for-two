@@ -62,10 +62,9 @@ def load_object_class(name):
 def load_images(imglist):
         r = dict()
         for image in imglist:
-                print ( "Loading image {0}".format(
-                        "{0}/{1}/{2}".format(get("Objects"),get ( "Objects Images" ), image[1]  )
-                        ))
-                img = pygame.image.load( "{0}/{1}/{2}".format(get("Objects"),get ( "Objects Images" ), image[1]  ) ).convert_alpha()
+                p = "/Users/apple/Projects/Personal/Asteroids/{0}/{1}/{2}".format(get("Objects"),get ( "Objects Images" ), image[1]  )
+                print ( "Loading image {0}".format(p))
+                img = pygame.image.load(p).convert_alpha()
                 
                 r[image[0]] = img
         return r

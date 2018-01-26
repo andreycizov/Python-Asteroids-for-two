@@ -2,6 +2,8 @@
 The Game by Andrej Cizov sc10a3c
 Tanks-in-the-space-like-game
 '''
+from __future__ import absolute_import
+
 from Modules.Vector25D import Vector25D
 
 
@@ -74,11 +76,15 @@ def add_objects():
         
         return [a,b]
 
+DECORATION = True
+
 def set_decoration():
         world = Modules.World.world
-        world.add_decoration(Vector25D(900, 300), Vector25D(-1, 0), "./planets/planet_glow.png")
-        world.add_decoration(Vector25D(100, 150), Vector25D(-3, 0.0005), "./planets/Saturn_(planet)_large.png")
-        world.add_decoration(Vector25D(600, 700), Vector25D(3, 0.06), "./planets/planet_venus_3d_screensaver-4114-scr.png")
+        
+        if DECORATION:
+            world.add_decoration(Vector25D(900, 300), Vector25D(-1, 0), "./planets/planet_glow.png")
+            world.add_decoration(Vector25D(100, 150), Vector25D(-3, 0.0005), "./planets/Saturn_(planet)_large.png")
+            world.add_decoration(Vector25D(600, 700), Vector25D(3, 0.06), "./planets/planet_venus_3d_screensaver-4114-scr.png")
 
 def reinit(a,b):
         world = Modules.World.world
@@ -119,8 +125,11 @@ def main():
                         world.add_text("Nobody has won", a, 1, 3)
                         world.loop(world.fps*3)
                         a,b=reinit(a,b)
-                
-#main()      
-cProfile.run('main()', 'fooprof')
+PROFILE = False
+
+if not PROFILE:                
+    main()      
+else:
+    cProfile.run('main()', 'fooprof')
 
 

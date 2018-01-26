@@ -1,7 +1,7 @@
 Game Name=The Game
 
-Window Width=3840
-Window Height=1080
+Window Width=1000
+Window Height=600
 #Window Width=1024
 #Window Height=768
 
@@ -35,11 +35,11 @@ Blast Damage Multiplier=5
 
 Bomb Distance Multiplier=0.7
 
-Font HP=dejavuserif
-Font HP Size=12
+Font HP=Sans Serif
+Font HP Size=18
 
-Font Info=dejavuserif
-Font Info Size=10
+Font Info=Sans Serif
+Font Info Size=16
 
 Font FastInfo=dejavuserif
 Font FastInfo Size=22

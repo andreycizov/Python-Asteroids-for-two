@@ -25,6 +25,10 @@ class Vector25D:
                 else:
                         return float( self.v[0]*v.v[0]+self.v[1]*v.v[1]+self.v[2]*v.v[2] )
                         
+        def __truediv__(self, i):
+                i = 1/i
+                return self*i
+
         def __div__(self, i):
                 i = 1/i
                 return self*i
