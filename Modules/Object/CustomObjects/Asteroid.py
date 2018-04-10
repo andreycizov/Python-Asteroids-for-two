@@ -36,17 +36,17 @@ class Asteroid(GenericObject):
                 pass
                 
         def collision(self, obj):
-                '''masses = self.mass*obj.mass
+                masses = self.mass*obj.mass
                 F = (self.V - obj.V)/self.mass/obj.mass
                 P1 = obj.P
                 P2 = self.P
                 P1.v[2] = 0
                 P2.v[2] = 0
-                F +=  (P1*self.mass - P2*obj.mass)/(self.mass+obj.mass)**2.7'''
+                F +=  (P1*self.mass - P2*obj.mass)/(self.mass+obj.mass)**2.7
                 
                 wh = self.rect.w + self.rect.h
                 wh2 = obj.rect.w + obj.rect.h
-                '''
+
                 Pcoll = (self.P*wh2+obj.P*wh)/(2+wh+wh2)
                 
                 Va = self.V
@@ -92,9 +92,9 @@ class Asteroid(GenericObject):
                 obj.A += (obj.P-self.P)*(1/(obj.P-self.P).length())*50
                 
                 Da = (Va-self.V).length()
-                Db = (Vb-obj.V).length()'''
+                Db = (Vb-obj.V).length()
                 
-                #Modules.World.world.physics.apply_force(obj, F*masses*obj.mass, (self.P-obj.P).norm())
+                Modules.World.world.physics.apply_force(obj, F*masses*obj.mass, (self.P-obj.P).norm())
                 '''
                 Add force application!!
                 '''

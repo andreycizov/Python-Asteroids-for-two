@@ -12,6 +12,7 @@ import Modules.World
 
 import Modules.Object.Loader
 from Modules.Object.CustomObjects.GenericObject import GenericObject
+from Modules.Object.CustomObjects.Asteroid import Asteroid
 import cProfile
 from Modules.Interface.StaticInterface import StaticInterface
 from Modules.Sprite.Sprite import Sprite
@@ -85,6 +86,12 @@ def set_decoration():
             world.add_decoration(Vector25D(900, 300), Vector25D(-1, 0), "./planets/planet_glow.png")
             world.add_decoration(Vector25D(100, 150), Vector25D(-3, 0.0005), "./planets/Saturn_(planet)_large.png")
             world.add_decoration(Vector25D(600, 700), Vector25D(3, 0.06), "./planets/planet_venus_3d_screensaver-4114-scr.png")
+
+        if True:
+            a = Modules.Object.Loader.load("GenericAsteroid", Asteroid)
+            a.P = Vector25D(600,150,0)
+            a.V = Vector25D(1, 1)
+            world.add(a)
 
 def reinit(a,b):
         world = Modules.World.world
